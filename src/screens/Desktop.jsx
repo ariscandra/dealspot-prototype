@@ -184,7 +184,7 @@ export function Desktop() {
         <div style={PAGE}>
           <div style={PRODUCT_MOCK}>
             <img
-              src="https://picsum.photos/seed/desktop-product/320/320"
+              src="/placeholder-kemeja.jpg"
               alt=""
               style={PRODUCT_IMAGE}
             />

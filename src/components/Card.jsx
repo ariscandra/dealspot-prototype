@@ -98,8 +98,8 @@ const memberBadgeStyle = {
   marginLeft: 'var(--space-4)',
 };
 
-export function getProductImageUrl(seed, width = 400, height = 300) {
-  return `https://picsum.photos/seed/${encodeURIComponent(seed)}/${width}/${height}`;
+export function getProductImageUrl() {
+  return '/placeholder-kemeja.jpg';
 }
 
 export function Card({
