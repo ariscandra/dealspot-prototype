@@ -1,0 +1,25 @@
+---
+description: DealSpot prototype — avoid revision loops; mandatory behaviour when working on prototype or docs
+alwaysApply: true
+---
+
+# DealSpot prototype & docs — mandatory behaviour
+
+## Avoid revision loops
+
+- **Before editing a file:** Read the relevant part of the file to see current state. Do not assume previous edits are present or absent.
+- **Do not apply the same fix twice:** If a change "didn't work", re-read the file and fix the actual cause. Do not repeat the same edit or suggestion.
+- **Verify after edit:** After changing code, verify (e.g. read the changed section, run `npm run build` or `npm run dev`, or run linter). If the user says "still wrong", re-read and fix with new information.
+- **One coherent change per turn when possible:** Prefer one logical unit of work (e.g. add Breakdown component + wire for one screen) then confirm, instead of many scattered edits that get reverted or re-done.
+
+## When working on the prototype (`prototype/`)
+
+- **Check current state first:** Read `prompt_dumpt.md` Section 0 and/or `design_spec.md` Section 9.0. Optionally list or open key files in `prototype/src` (App, screens, components) so you extend what exists.
+- **Extend, don't rewrite:** Add to existing `ExtensionPanel`, `Mobile`, `Desktop`; add new components (Breakdown, EmptyState, etc.) where the spec says. Do not duplicate entire screens or create a second Mobile flow unless the spec explicitly adds a new frame.
+- **Follow implementation order:** Use `prompt_dumpt.md` Section 3 (Phase A → B → C). Do not re-implement the same phase or the same feature without checking whether it is already done.
+- **Design tokens:** Use `tokens.css` for colors, spacing, typography. Do not hardcode colors or spacing that exist in tokens.
+
+## When working on docs (`concept.md`, `design_spec.md`, `prompt_dumpt.md`)
+
+- **Do not re-doc the same content:** "Current prototype state" and "what's done" are already in the docs. Do not rewrite or duplicate those sections from scratch unless the user asks to update them after real code changes.
+- **One source of truth:** `design_spec.md` is the UI spec; `prompt_dumpt.md` is the implementation prompt and session order. Do not invent conflicting structure (e.g. different frame list or different component names) without aligning with these files.

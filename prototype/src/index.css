@@ -1,0 +1,39 @@
+@import './tokens.css';
+@import './animations.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line);
+  color: var(--color-text-primary);
+  background: var(--color-bg-subtle);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.dealspot-input-focus:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-subtle);
+}
+
+.dealspot-set-lokasi-btn:hover {
+  background-color: var(--color-bg-subtle) !important;
+  border-color: var(--color-link) !important;
+}

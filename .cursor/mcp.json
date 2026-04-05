@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "open-pencil": {
+      "command": "d:\\Kuliah\\Technopreneurship\\Dealspot\\run-openpencil-mcp.cmd"
+    }
+  }
+}
